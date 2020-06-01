@@ -34,6 +34,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import './dashboard.less';
 import DashboardHome from '../DashboardHome/DashboardHome'
 import Product from '../Product/Product'
+import ProductList from '../ProductList/ProductList'
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 // import logo from '../../assets/logo.svg'
 
 
@@ -79,7 +82,7 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen,topIcon] = React.useState(false);
+  const [mobileOpen, setMobileOpen,topIcon,showicon] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -88,65 +91,10 @@ function ResponsiveDrawer(props) {
       topIcon(!topIcon)
       console.log("homeicon clicked")
   }
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <div className="topdrawer">
-          <div className="homeIcon">
-              <div onClick={clickHomeICon}>
-                <HomeIcon className="iconColor"/>
-              </div>
-              <div className="oreo">
-                  Oreo
-              </div>
-          </div>
-          <div className="homeIcon">
-              <div>
-                  <PersonIcon className="iconColor"/>
-              </div>
-              <div className="oreo">
-                  User
-              </div>
-
-          </div>
-      </div>
-      <div>
-        <div className="header">
-        
-          <div className="headerMain"> 
-           -- MAIN
-          </div>
-        </div>
-        <div>
-          
-        </div>
-      </div>
-        <div className="header1">
-      <ExpansionPanel className="broderPanel">
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-          className="broderPanel"
-        >
-          <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
-          <Typography className="heading">Ecommerce</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-        <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-      </div>
-    </div>
-  );
-
+  const showButton=()=>{
+    showicon(!showicon);
+  }
+ 
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
@@ -217,7 +165,7 @@ function ResponsiveDrawer(props) {
                       <PowerSettingsNewIcon className="iconColorAppbar"  style={{fontSize:"18px"}}/>
                     </div>
                     <div className="alignment">
-                      <SettingsIcon className="iconColorAppbar"  style={{fontSize:"18px"}}/>
+                      <SettingsIcon className="iconColorAppbar3"  style={{fontSize:"18px"}}/>
                     </div>
                   </div>
           </div>
@@ -242,7 +190,89 @@ function ResponsiveDrawer(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-            {drawer}
+           
+    <div>
+      <div className={classes.toolbar} />
+      <div className="topdrawer">
+          <div className="homeIcon">
+              <div onClick={clickHomeICon}>
+                <HomeIcon className="iconColor"/>
+              </div>
+              <div className="oreo">
+                  Oreo
+              </div>
+          </div>
+          <div className="homeIcon">
+              <div>
+                  <PersonIcon className="iconColor"/>
+              </div>
+              <div className="oreo">
+                  User
+              </div>
+
+          </div>
+      </div>
+      <div>
+        <div className="header">
+        
+          <div className="headerMain"> 
+           -- MAIN
+          </div>
+        </div>
+        <div>
+          
+        </div>
+      </div>
+        <div className="header1">
+          <div>
+            <div className="expansion">
+              <div className="expansion">
+                <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+                <div className="ecommerce">Ecommerce</div>
+              </div>
+              <div  onClick={showButton}>
+                <NavigateNextIcon className="cartIcon" style={{fontSize:"20px",marginTop:"10px"}}/>
+              </div>
+            
+            </div>
+            
+             {  {showicon} === true ? 
+            <div>
+            <div>
+              <div className="expansion">
+              <ArrowRightAltIcon/>
+              <div>Dashboard</div>
+              </div>
+              <div className="expansion">
+              <ArrowRightAltIcon/>
+              <div>Product</div>
+              </div>
+            </div>
+            </div> : null }
+          </div>
+      {/* <ExpansionPanel className="broderPanel">
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          className="broderPanel"
+        >
+          <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+          <Typography className="heading">Ecommerce</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+        <List>
+        {['Dashboard', 'Product', 'ProductList','ProductDetails'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{<ArrowRightAltIcon/>}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+        </ExpansionPanelDetails>
+      </ExpansionPanel> */}
+      </div>
+    </div>
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
@@ -253,7 +283,97 @@ function ResponsiveDrawer(props) {
             variant="permanent"
             open
           >
-            {drawer}
+            
+    <div>
+      <div className={classes.toolbar} />
+      <div className="topdrawer">
+          <div className="homeIcon">
+              <div onClick={clickHomeICon}>
+                <HomeIcon className="iconColor"/>
+              </div>
+              <div className="oreo">
+                  Oreo
+              </div>
+          </div>
+          <div className="homeIcon">
+              <div>
+                  <PersonIcon className="iconColor"/>
+              </div>
+              <div className="oreo">
+                  User
+              </div>
+
+          </div>
+      </div>
+      <div>
+        <div className="header">
+        
+          <div className="headerMain"> 
+           -- MAIN
+          </div>
+        </div>
+        <div>
+          
+        </div>
+      </div>
+        <div className="header1">
+          <div>
+            <div className="expansion">
+              <div className="expansion">
+                <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+                <div className="ecommerce">Ecommerce</div>
+              </div>
+              <div  onClick={showButton}>
+                <NavigateNextIcon className="cartIcon" style={{fontSize:"20px",marginTop:"10px"}}/>
+              </div>
+            
+            </div>
+            
+              
+            <div>
+            <div>
+              <div className="expansion1">
+              <ArrowRightAltIcon  className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+              <div className="ecommerce1">Dashboard</div>
+              </div>
+              <div className="expansion1">
+              <ArrowRightAltIcon  className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+              <div className="ecommerce1">Product</div>
+              </div>
+              <div className="expansion1">
+              <ArrowRightAltIcon  className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+              <div className="ecommerce1">Product List</div>
+              </div>
+              <div className="expansion1">
+              <ArrowRightAltIcon  className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+              <div className="ecommerce1">Product Details</div>
+              </div>
+            </div>
+            </div>
+          </div>
+      {/* <ExpansionPanel className="broderPanel">
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          className="broderPanel"
+        >
+          <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
+          <Typography className="heading">Ecommerce</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+        <List>
+        {['Dashboard', 'Product', 'ProductList','ProductDetails'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{<ArrowRightAltIcon/>}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+        </ExpansionPanelDetails>
+      </ExpansionPanel> */}
+      </div>
+    </div>
           </Drawer>
         </Hidden>
       </nav>

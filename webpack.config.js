@@ -16,6 +16,7 @@ module.exports = {
           loader: "babel-loader"
         }
       },
+      
       {
         test: /\.less$/,
         use: [
@@ -52,6 +53,7 @@ module.exports = {
           },
         ]
       },
+      
       // {
       //   test : /\.(png|jpg|gif)$/i,
       //   use :[

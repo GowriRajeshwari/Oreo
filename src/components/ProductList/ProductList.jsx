@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import HomeIcon from '@material-ui/icons/Home';
-import './product.less'
-import productdata from './product.json'
+import './productList.less'
+import productList from './productList.json'
 
 // import '../../assets'
 
-class Product extends React.Component {
+class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -14,6 +14,7 @@ class Product extends React.Component {
  render(){
      return(
          <div className="firstcontainer"> 
+         cmxbgdnfb
         <div className="rowP">
             <div className="productSizeP">
                 <div className="productNameP">
@@ -30,7 +31,7 @@ class Product extends React.Component {
                             <div className="wordStyle">/</div>
                             <div className="wordStyle1">eCommerce</div>
                             <div className="wordStyle">/</div>
-                            <div className="wordStyle">Product</div>
+                            <div className="wordStyle">ProductList</div>
                         </div>
                 </div>
             </div>
@@ -39,7 +40,7 @@ class Product extends React.Component {
 
         <div className="containerFluid">
             <div className="rowFlex">
-                {productdata.map(data => (
+                {/* {productdata.map(data => (
                     
                         <div className="col" key={data.id}>
                         <div className="productItem">
@@ -68,7 +69,7 @@ class Product extends React.Component {
     
                     </div>
                     
-                ))}
+                ))} */}
                
             </div>
         </div>
@@ -78,4 +79,4 @@ class Product extends React.Component {
     
 }
 
-     export default Product;
+     export default ProductList;

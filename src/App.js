@@ -4,6 +4,8 @@ import history from "./history";
 import dashboard from "./components/Dashboard/Dashboard.jsx"
 import dashboardHome from './components/DashboardHome/DashboardHome.jsx'
 import product from './components/Product/Product.jsx'
+import productList from './components/ProductList/ProductList.jsx'
+import header from './components/Dashboard/Header.jsx'
 
 
 function App() {
@@ -11,9 +13,12 @@ function App() {
     <Router history={history}>
       <Switch>
     
-        <Route path="/" exact component={dashboard} />
+        {/* <Route path="/" exact component={dashboard} />
         <Route path="/dashboardHome" component={dashboardHome}/>
         <Route path="/productPage" component={product} />
+        <Route path="/productList" component={productList} /> */}
+        <Route path="/" exact component={header} />
+
 
   
       </Switch>

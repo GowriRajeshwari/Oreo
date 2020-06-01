@@ -8,11 +8,13 @@
     padding: 20px;
     justify-content: space-between;
     width: 100%;
+    
 }
 .productSizeP{
     height: 67px;
     display: flex;
     align-items: flex-start;
+    width: 100%;
 }
 .productColorP{
     font-family:lato;
@@ -26,7 +28,8 @@
 
 }
 .productNameP{
-    width: 629px;
+    min-width: 770px;
+    max-width: 100%;
 }
 .pathP{
     width: 300px;
@@ -75,31 +78,90 @@
     // color: #888;
 }
 .containerFluid{
-    width: 100%;
-    padding: 15px;
+    width: 82%;
+    display: flex;
+    // flex-wrap:wrap ;
+    // padding: 15px;
+    z-index: 3;
+    top:11em;
+    position: absolute;
+    // background-color: orange;
 }
 .rowFlex{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
 }
 .col{
-    max-width: 25%;
-    position: relative;
-    width: 100%;
+    // max-width: 25%;
+    // position: relative;
+    display : flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // width: 100%;
+    padding: 10px;
+    // background-color: red;
     
 }
 .productItem{
     background-color: white;
-    width: 100%;
+    width: 249px;
     box-shadow: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:10px;
+    
 }
 .body{
     color: #424242;
     font-weight: 400;
-    padding: 20px;
+    // padding: 20px;
     font-size: 14px;
 }
 .imgFolder{
+    // width : 239px;
+    // height: 239px;
+    padding : 5px;
+    display: flex;
+    justify-content: center;
+}
+.imgSize{
+    width : 209px;
+    height: 209px;
+}
+.productname{
+    display: flex;
+    justify-content: center;
+}
+.columnProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
+.rowProduct{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.firstcontainer{
+    display: flex;
+    // width : 100%;
+    // background-color: yellow;
+}
+
+.hoverbutton{
+    visibility: hidden;
+    // margin: 0 auto;
+    // overflow: hidden;
+    // display: none;
+    background-color: yellowgreen;
+}
+.imgFolder:hover .hoverbutton{ 
+    // display:block;
+    visibility: visible;
+    background-color: yellowgreen;
+
+    
+    }
