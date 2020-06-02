@@ -101,13 +101,29 @@
     size: small;
     transition: transform 300ms ease-in-out;
     // animation: bounce;
+   
 
+}
+@-webkit-keyframes rotation{
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(359deg);
+    }
+}
+.alignmentrotate{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    -webkit-animation: rotation 2s infinite linear;
 }
 .alignment{
     display: flex;
     align-items: center;
     margin-left: 25px;
 }
+
 .inlineBlock{
     display: inline-block;
 }
@@ -190,4 +206,113 @@
     flex-direction: row;
     align-items: center;
     // justify-content: space-between;
+}
+.alignmentshow1{
+    display: flex;
+    // align-items: center;
+    // margin-left: 25px;
+}
+.rowshow{
+    display: flex;
+    flex-direction: row;
+}
+// .notification{
+//     // background-color: black;
+//     color : white;
+    
+
+// }
+// .notification .badge{
+//     position: absolute;
+//     top:-10;
+//     right : -10;
+//     padding: 5px 10px;
+//     border-radius: 50%;
+//     background-color: white;
+//     color:white
+// }
+.notify .heartbit{
+-webkit-border-radius: 70px;
+/* border-radius: 70px; */
+position: absolute;
+top: -20px;
+right: -16px;
+height: 25px;
+width: 25px;
+z-index: 10;
+border: 4px solid;
+border-color:  #455a64;
+// -webkit-animation: heartbit 1s ease-out linear;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+animation:  heartbeat .75s ease-out infinite ;
+}
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .5 );
+  }
+  10%{
+    transform: scale( .10 );
+  }
+  20%
+  {
+    transform: scale( .15 );
+  }
+  30%{
+    transform: scale( .20 );
+  }
+  40%
+  {
+    transform: scale( .30 );
+  }
+  50%{
+    transform: scale( .40 );
+  }
+  60%
+  {
+    transform: scale( .50 );
+  }
+  70%{
+    transform: scale( .60 );
+  }
+  80%
+  {
+    transform: scale( .70 );
+  }
+  90%{
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .80 );
+  }
+}
+.notify {
+    position: absolute;
+    top: 30px;
+    // right: 11px;
+    // left:45px;
+    margin-left: 16px;
+}
+.notify .point{
+    border-radius: 30px;
+    width: 6px;
+    height: 6px;
+    background-color: #3d4c5a;
+    position: absolute;
+    right: -6px;
+    top: -10px;
+
+}
+
+.alignmentrotate{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+.notificationrotate{
+    display: flex;
+    flex-direction: row;
 }

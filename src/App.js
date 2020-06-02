@@ -13,11 +13,11 @@ function App() {
     <Router history={history}>
       <Switch>
     
-        {/* <Route path="/" exact component={dashboard} />
+        <Route path="/" exact component={dashboard} />
         <Route path="/dashboardHome" component={dashboardHome}/>
         <Route path="/productPage" component={product} />
-        <Route path="/productList" component={productList} /> */}
-        <Route path="/" exact component={header} />
+        <Route path="/productList" component={productList} />
+        <Route path="/header" component={header} />
 
 
   
