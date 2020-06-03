@@ -38,10 +38,11 @@ import ProductList from '../ProductList/ProductList'
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import ProductDetails from '../ProductDetails/ProductDetails'
 // import logo from '../../assets/logo.svg'
 
 
-const drawerWidth = 250;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -370,7 +371,7 @@ function ResponsiveDrawer(props) {
 
                   <div>
                     <div>
-                      <div className="expansion1">
+                      <div className="expansion1" onClick={() => screenChanging("dashboard")}>
                         <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                         <div className="ecommerce1">Dashboard</div>
                       </div>
@@ -382,7 +383,7 @@ function ResponsiveDrawer(props) {
                         <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                         <div className="ecommerce1">Product List</div>
                       </div>
-                      <div className="expansion1">
+                      <div className="expansion1" onClick={() => screenChanging("productdetails")}>
                         <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                         <div className="ecommerce1">Product Details</div>
                       </div>
@@ -418,7 +419,7 @@ function ResponsiveDrawer(props) {
       <main>
         {choice === 'productlist' ?
         <ProductList/> :  choice === 'product' ?
-      <Product/> : <ProductList/>}
+      <Product/> : choice === 'productdetails' ? <ProductDetails/> : <Product/> }
         {/* <Product /> */}
       </main>
     </div>

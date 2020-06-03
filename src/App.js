@@ -5,7 +5,8 @@ import dashboard from "./components/Dashboard/Dashboard.jsx"
 import dashboardHome from './components/DashboardHome/DashboardHome.jsx'
 import product from './components/Product/Product.jsx'
 import productList from './components/ProductList/ProductList.jsx'
-import header from './components/Dashboard/Header.jsx'
+import header from './components/Dashboard/HeaderPage.jsx'
+import productDetails from './components/ProductDetails/ProductDetails.jsx'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/dashboardHome" component={dashboardHome}/>
         <Route path="/productPage" component={product} />
         <Route path="/productList" component={productList} />
+        <Route path="/productDetails" component={productDetails} />
         <Route path="/header" component={header} />
 
 

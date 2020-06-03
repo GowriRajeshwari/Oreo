@@ -57,19 +57,18 @@ class Product extends React.Component {
                                 <div  className={this.state.show && this.state.id === data.id ? "imgFoldershow" : "imgFolder"} > 
                                      <img src={data.img}  className={this.state.show && this.state.id === data.id ? "imgSizeshow" : 'imgSize'}/>
                                 </div>
-                                { this.state.show && this.state.id === data.id ?
-                                //  <div className="hoverbutton">
-                                //  <div className="row">
-                                //      <div className="buttoncolor">
+                                {/* { this.state.show && this.state.id === data.id ?
+                                 <div className="hoverbutton">
+                                 <div className="row">
+                                     <div className="buttoncolor">
                                         <AddIcon/>
-                                //      </div>
-                                //      <div className="buttoncolor">
-                                //         <ShoppingCartIcon/>
-                                //      </div>
-                                //  </div>
-                                //  </div> 
-                                : null
-                                }
+                                     </div>
+                                     <div className="buttoncolor">
+                                        <ShoppingCartIcon/>
+                                     </div>
+                                 </div>
+                                 </div> : null
+                                } */}
                                 </div>
                                
                                 <div className="columnProduct">
