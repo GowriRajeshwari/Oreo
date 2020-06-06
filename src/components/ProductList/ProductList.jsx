@@ -19,7 +19,7 @@ class ProductList extends React.Component {
                 <div className="rowlist">
                     <div className="productSizelist">
                         <div className="productNamelist">
-                            <div className="productColorlist">Product</div>
+                            <div className="productColorlist">Product List</div>
                             <small className="productWelcomelist">Welcome to Oreo</small>
                         </div>
                         <div className="pathlist">

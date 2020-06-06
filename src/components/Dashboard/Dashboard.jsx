@@ -39,6 +39,8 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import ProductDetails from '../ProductDetails/ProductDetails'
+import Header from '../HeaderPage/HeaderPage'
+import Dashboardchat from '../DashboardChart/DashboardChat'
 // import logo from '../../assets/logo.svg'
 
 
@@ -117,7 +119,7 @@ function ResponsiveDrawer(props) {
   //   }
   // }
   const container = window !== undefined ? () => window().document.body : undefined;
-
+  
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -214,7 +216,6 @@ function ResponsiveDrawer(props) {
 
 
       <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -229,89 +230,7 @@ function ResponsiveDrawer(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-
-            <div>
-              <div className={classes.toolbar} />
-              <div className="topdrawer">
-                <div className="homeIcon">
-                  <div onClick={clickHomeICon}>
-                    <HomeIcon className="iconColor" />
-                  </div>
-                  <div className="oreo">
-                    Oreo
-              </div>
-                </div>
-                <div className="homeIcon">
-                  <div>
-                    <PersonIcon className="iconColor" />
-                  </div>
-                  <div className="oreo">
-                    User
-              </div>
-
-                </div>
-              </div>
-              <div>
-                <div className="header">
-
-                  <div className="headerMain">
-                    -- MAIN
-          </div>
-                </div>
-                <div>
-
-                </div>
-              </div>
-              <div className="header1">
-                <div>
-                  <div className="expansion">
-                    <div className="expansion">
-                      <ShoppingCartIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                      <div className="ecommerce">Ecommerce</div>
-                    </div>
-                    <div onClick={showButton}>
-                      <NavigateNextIcon className="cartIcon" style={{ fontSize: "20px", marginTop: "10px" }} />
-                    </div>
-
-                  </div>
-
-                  {{ showicon } === true ?
-                    <div>
-                      <div>
-                        <div className="expansion">
-                          <ArrowRightAltIcon />
-                          <div>Dashboard</div>
-                        </div>
-                        <div className="expansion">
-                          <ArrowRightAltIcon />
-                          <div>Product</div>
-                        </div>
-                      </div>
-                    </div> : null}
-                </div>
-                {/* <ExpansionPanel className="broderPanel">
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-          className="broderPanel"
-        >
-          <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
-          <Typography className="heading">Ecommerce</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-        <List>
-        {['Dashboard', 'Product', 'ProductList','ProductDetails'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{<ArrowRightAltIcon/>}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-        </ExpansionPanelDetails>
-      </ExpansionPanel> */}
-              </div>
-            </div>
+                <Header screenChanging={screenChanging}/>
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
@@ -322,104 +241,16 @@ function ResponsiveDrawer(props) {
             variant="permanent"
             open
           >
-
-            <div>
-              <div className={classes.toolbar} />
-              <div className="topdrawer">
-                <div className="homeIcon">
-                  <div onClick={clickHomeICon}>
-                    <HomeIcon className="iconColor" />
-                  </div>
-                  <div className="oreo">
-                    Oreo
-              </div>
-                </div>
-                <div className="homeIcon">
-                  <div>
-                    <PersonIcon className="iconColor" />
-                  </div>
-                  <div className="oreo">
-                    User
-              </div>
-
-                </div>
-              </div>
-              <div>
-                <div className="header">
-
-                  <div className="headerMain">
-                    -- MAIN
-          </div>
-                </div>
-                <div>
-
-                </div>
-              </div>
-              <div className="header1">
-                <div>
-                  <div className="expansion">
-                    <div className="expansion">
-                      <ShoppingCartIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                      <div className="ecommerce">Ecommerce</div>
-                    </div>
-                    <div onClick={showButton}>
-                      <NavigateNextIcon className="cartIcon" style={{ fontSize: "20px", marginTop: "10px" }} />
-                    </div>
-
-                  </div>
-
-
-                  <div>
-                    <div>
-                      <div className="expansion1" onClick={() => screenChanging("dashboard")}>
-                        <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                        <div className="ecommerce1">Dashboard</div>
-                      </div>
-                      <div className="expansion1" onClick={() => screenChanging("product")}>
-                        <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                        <div className="ecommerce1">Product</div>
-                      </div>
-                      <div className="expansion1" onClick={() => screenChanging("productlist")}>
-                        <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                        <div className="ecommerce1">Product List</div>
-                      </div>
-                      <div className="expansion1" onClick={() => screenChanging("productdetails")}>
-                        <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                        <div className="ecommerce1">Product Details</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* <ExpansionPanel className="broderPanel">
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-          className="broderPanel"
-        >
-          <ShoppingCartIcon className="cartIcon" style={{fontSize:"20px",paddingRight:"3px"}}/>
-          <Typography className="heading">Ecommerce</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-        <List>
-        {['Dashboard', 'Product', 'ProductList','ProductDetails'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{<ArrowRightAltIcon/>}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-        </ExpansionPanelDetails>
-      </ExpansionPanel> */}
-              </div>
-            </div>
+            <Header screenChanging={screenChanging}/>
           </Drawer>
         </Hidden>
       </nav>
       <main>
         {choice === 'productlist' ?
         <ProductList/> :  choice === 'product' ?
-      <Product/> : choice === 'productdetails' ? <ProductDetails/> : <Product/> }
+        
+      <Product/> : choice === "dashboard" ? <Dashboardchat/> : choice === 'productdetails' ? 
+      <ProductDetails/> :  <Product/> }
         {/* <Product /> */}
       </main>
     </div>

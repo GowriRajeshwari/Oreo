@@ -1,4 +1,4 @@
-[
+{ "Images" : [
     {
         "id" : 1,
         "img" : "../../assets/cycle.png"
@@ -20,4 +20,36 @@
         "img" : "../../assets/flowerplot.png"
     }
 
-]
+],
+"DetailsList" : [
+    {
+        "id" : 1,
+        "img" : "../../assets/cycle.png",
+        "title" : " Simple Black Clock"
+    },
+    {
+        "id": 2,
+        "img" : "../../assets/flowerplot.png",
+        "title" : " Simple Black Clock"
+
+    },
+    {
+        "id": 3,
+        "img" : "../../assets/bottle.png",
+        "title" : " Simple Black Clock"
+
+    },
+    {
+        "id": 4,
+        "img" : "../../assets/flowerplot.png",
+        "title" : " Simple Black Clock"
+
+    },
+    {
+        "id": 5,
+        "img" : "../../assets/flowerplot.png",
+        "title" : " Simple Black Clock"
+
+    }
+
+]}

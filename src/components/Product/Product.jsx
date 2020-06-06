@@ -4,7 +4,6 @@ import './product.less'
 import productdata from './product.json';
 import AddIcon from '@material-ui/icons/Add';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-// import '../../assets'
 
 class Product extends React.Component {
   constructor(props) {
@@ -29,25 +28,26 @@ class Product extends React.Component {
                         <div className="productColorP">Product</div>
                         <small className="productWelcomeP">Welcome to Oreo</small>
                 </div>
-            <div className="pathP">
-                <div className="homeIcon1P">
-                        <div>
-                            <HomeIcon className="iconHomeColorP" style={{fontSize:"18px"}}/>
-                        </div>
-                        <div className="oreo1">
-                            <div className="wordStyle1">Oreo</div> 
-                            <div className="wordStyle">/</div>
-                            <div className="wordStyle1">eCommerce</div>
-                            <div className="wordStyle">/</div>
-                            <div className="wordStyle">Product</div>
-                        </div>
+                <div className="pathP">
+                    <div className="homeIcon1P">
+                            <div>
+                                <HomeIcon className="iconHomeColorP" style={{fontSize:"18px"}}/>
+                            </div>
+                            <div className="oreo1">
+                                <div className="wordStyle1">Oreo</div> 
+                                <div className="wordStyle">/</div>
+                                <div className="wordStyle1">eCommerce</div>
+                                <div className="wordStyle">/</div>
+                                <div className="wordStyle">Product</div>
+                            </div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
         <div className="containerFluid">
             <div className="rowFlex">
+                <div className="rowFlex1">
                 {productdata.map(data => (
                     
                         <div className="col" key={data.id}>
@@ -57,18 +57,29 @@ class Product extends React.Component {
                                 <div  className={this.state.show && this.state.id === data.id ? "imgFoldershow" : "imgFolder"} > 
                                      <img src={data.img}  className={this.state.show && this.state.id === data.id ? "imgSizeshow" : 'imgSize'}/>
                                 </div>
-                                {/* { this.state.show && this.state.id === data.id ?
-                                 <div className="hoverbutton">
-                                 <div className="row">
+                               
+                                { this.state.show && this.state.id === data.id ?
+                                  <div className="hoverbutton">
+                                  {/* <div className="row"> */}
+                                      <div className="buttoncolor">
+                                         <AddIcon/>
+                                      </div>
+                                      <div className="buttoncolor">
+                                         <ShoppingCartIcon/>
+                                      </div>
+                                  {/* </div> */}
+                                  </div>
+                                 :  <div className="hoverbutton1">
+                                 {/* <div className="row"> */}
                                      <div className="buttoncolor">
                                         <AddIcon/>
                                      </div>
                                      <div className="buttoncolor">
                                         <ShoppingCartIcon/>
                                      </div>
+                                 {/* </div> */}
                                  </div>
-                                 </div> : null
-                                } */}
+                                }
                                 </div>
                                
                                 <div className="columnProduct">
@@ -80,7 +91,7 @@ class Product extends React.Component {
                                         <div >
                                             {data.dollar}
                                         </div>
-                                        <div>
+                                        <div style={{marginLeft :"10px",color:"red",fontWeight : "500"}}>
                                             {data.discountDollar}
                                         </div>
                                     </div>
@@ -91,7 +102,7 @@ class Product extends React.Component {
                     </div>
                     
                 ))}
-               
+               </div>
             </div>
         </div>
 
