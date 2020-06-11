@@ -3,20 +3,22 @@ import { SHOW_HOME,SHOW_USER} from '../constants/actionTypes.js';
 const initialstate={
     show : false
 }
-const HeaderPageReducer = (state = initialstate,action)=>{
+export default (state = {show : true},action)=>{
     switch(action.type){
-        case SHOW_USER:
+        case 'SHOW_USER':
+            console.log(action.payload)
             return {
                 ...state,
-                show:true
+                show:false
             }
-        case SHOW_HOME :
+        case 'SHOW_HOME' :
             return {
                 ...state,
-                show :false
+                show :true
             }
         default:
+            // console.log("default state",state)
             return state
     }
 }
-export default HeaderPageReducer
+// export default HeaderPageReducer

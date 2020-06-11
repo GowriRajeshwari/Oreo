@@ -16,7 +16,7 @@ class ProductList extends React.Component {
     render() {
         return (
             <div className="firstcontainerlist">
-                <div className="rowlist">
+                {/* <div className="rowlist">
                     <div className="productSizelist">
                         <div className="productNamelist">
                             <div className="productColorlist">Product List</div>
@@ -37,7 +37,7 @@ class ProductList extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="containerFluidlist">
                     <div className="rowFlexlist">

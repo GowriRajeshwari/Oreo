@@ -3,9 +3,9 @@ import logger from "redux-logger";
 import headerReducer from "../reducers/HeaderPageReducer";
 
 const store =  createStore(
-    combineReducers({
-        headerReducer
-    }),
+    // combineReducers({
+        headerReducer,
+    // }),
     applyMiddleware(logger)
 );
 export default store;

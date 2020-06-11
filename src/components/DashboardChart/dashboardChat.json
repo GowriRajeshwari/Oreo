@@ -1,0 +1,50 @@
+{ "PhoneDetails" : [
+    {
+        "id" : 1,
+        "img" : "../../assets/cycle.png",
+        "Name":"Hossien",
+        "Item":"IPHONE-7",
+        "Address":"Porterfield 508 Virginia Street Chicago, IL 60653",
+        "Quality":"3",
+        "Status":"DONE"
+    },
+    {
+        "id": 2,
+        "img" : "../../assets/flowerplot.png",
+        "Name":"Frank",
+        "Item":"NOKIA-456",
+        "Address":"1516 Holt Street West Palm Beach, FL 33401",
+        "Quality":"13",
+        "Status":"PENDING"
+    },
+    {
+        "id": 3,
+        "img" : "../../assets/bottle.png",
+        "Name":"Camara",
+        "Item":"NOKIA-8",
+        "Address":"2595 Pearlman Avenue Sudbury, MA 01776",
+        "Quality":"3",
+        "Status":"DELIVERED"
+    },
+    {
+        "id": 4,
+        "img" : "../../assets/flowerplot.png",
+        "Name":"Maryam",
+        "Item":"NOKIA-456",
+        "Address":"Porterfield 508 Virginia Street Chicago, IL 60653",
+        "Quality":"4",
+        "Status":"DONE"
+    },
+    {
+        "id": 5,
+        "img" : "../../assets/flowerplot.png",
+        "Name":"Micheal",
+        "Item":"SAMSANG PRO",
+        "Address":"508 Virginia Street Chicago, IL 60653",
+        "Quality":"1",
+        "Status":"DONE"
+    }
+
+]
+
+}

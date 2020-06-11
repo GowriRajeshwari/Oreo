@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import { SHOW_HOME,SHOW_USER } from '../../constants/actionTypes.js'
 
 const mapStateToProps=(state)=>{
+    console.log(state.show)
     return{
         show : state.show
     }
@@ -71,23 +72,7 @@ class Header extends React.Component {
 
                 {this.props.show === true ?
                 
-                <div>
-                    <div>
-                        <a className="profileimg">
-                            <img src="../../assets/profile.jpg" className="profileimgsize"/>
-                        </a>
-                    </div>
-                    <div className="profilesize">
-                        <h4 className="profilename">Michael</h4>
-                    </div>   
-                    <div className="profilesize1">
-                    <div>Ux UI Designer</div>
-                    </div> 
-                        {/* <div className="profilesize1">
-                                 <div className="para">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</div>
-                        </div> */}
-                </div>
-                 :
+               
                  <div>
                  <div className="header">
 
@@ -106,7 +91,7 @@ class Header extends React.Component {
                                 <ShoppingCartIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                                 <div className="ecommerce">Ecommerce</div>
                             </div>
-                            <div >
+                            <div onClick={()=>this.expansed()}>
                                 <NavigateNextIcon className="cartIcon" style={{ fontSize: "20px", marginTop: "10px" }} />
                             </div>
 
@@ -136,7 +121,25 @@ class Header extends React.Component {
                     </div> 
                     </div>
                
-                </div> }
+                </div> 
+                :
+                 <div>
+                 <div>
+                     <a className="profileimg">
+                         <img src="../../assets/profile.jpg" className="profileimgsize"/>
+                     </a>
+                 </div>
+                 <div className="profilesize">
+                     <h4 className="profilename">Michael</h4>
+                 </div>   
+                 <div className="profilesize1">
+                 <div>Ux UI Designer</div>
+                 </div> 
+                     <div className="profilesize1">
+                              <div className="para">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</div>
+                     </div>
+             </div>
+              }
 
 
 

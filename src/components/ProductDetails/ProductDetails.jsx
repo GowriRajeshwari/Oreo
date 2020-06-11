@@ -31,7 +31,7 @@ class Product extends React.Component {
     render() {
         return (
             <div className="firstcontainerdetails">
-                <div className="rowdetails">
+                {/* <div className="rowdetails">
                     <div className="productSizedetails">
                         <div className="productNamedetails">
                             <div className="productColordetails">Product Details</div>
@@ -52,7 +52,7 @@ class Product extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="containerFluiddetails">
                     <div className="rowFlexdetails">
