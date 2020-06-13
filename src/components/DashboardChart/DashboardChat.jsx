@@ -462,7 +462,7 @@ class DashboardChat extends React.Component {
 
           <div className="rowFlexchart11" >
 
-            <div className="rowFlex1chart23">
+            <div className="rowFlex1chart23" style={{marginLeft:"0px"}}>
 
 
               <div className="colchart" >
@@ -662,63 +662,188 @@ class DashboardChat extends React.Component {
               <div className="colchart" >
 
                 <div className="bobychart">
-                  <div style={{width:"1009px"}}>
-                        <div className="rowTopchart1" >
-                          <div className="rowTopchart">
+                  <div className="widthvalue">
+                    <div className="rowTopchart1" >
+                      <div className="rowTopchart">
 
-                            <div className="productstyle" >
-                              Recent
+                        <div className="productstyle" >
+                          Recent
                             </div>
-                            <div className="reportstyle">Order</div>
-                          </div>
+                        <div className="reportstyle">Order</div>
+                      </div>
 
-                          <div className="rowTopchart11">
-                            <MoreHorizIcon style={{ color: "#888" }} />
-                            <CloseIcon style={{ color: "#888" }} />
-                          </div>
-                        </div>
+                      <div className="rowTopchart11">
+                        <MoreHorizIcon style={{ color: "#888" }} />
+                        <CloseIcon style={{ color: "#888" }} />
+                      </div>
+                    </div>
 
-                        <table style={{width:"1000px"}}>
-                          <thead>
-                            <tr>
-                              <th align="Left" style={{width:"60px",height:"47px"}}>#</th>
-                              <th  align="Left" style={{width:"98px",height:"47px"}}>Name</th>
-                              <th align="Left" style={{width:"163px",height:"47px"}}>Item</th>
-                              <th align="Left" style={{width:"449px",height:"47px"}}>Address</th>
-                              <th align="Left" style={{width:"113px",height:"47px"}}>Quality</th>
-                              <th align="Left" style={{width:"126px",height:"47px"}}>Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                          {/* {this.state.data.map((data, index) => {
+                    <table >
+                      <thead>
+                        <tr>
+                          <th align="Left" style={{ width: "60px", height: "47px" }}>#</th>
+                          <th align="Left" style={{ width: "98px", height: "47px" }}>Name</th>
+                          <th align="Left" style={{ width: "163px", height: "47px" }}>Item</th>
+                          <th align="Left" style={{ width: "449px", height: "47px" }}>Address</th>
+                          <th align="Left" style={{ width: "113px", height: "47px" }}>Quality</th>
+                          <th align="Left" style={{ width: "126px", height: "47px" }}>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {/* {this.state.data.map((data, index) => {
                           return */}
-                          {mobiledata.PhoneDetails.map(data => {
-                            return(
+                        {mobiledata.PhoneDetails.map(data => {
+                          return (
                             <tr key={data.id}>
-                              <td style={{width:"60px",height:"47px"}}>
-                                <div style={{width:"40px",height:"33px",backgroundColor:"rgb(204,204,204"}}>
-
+                              <td style={{ width: "60px", height: "47px" }}>
+                                <div style={{ width: "40px", height: "33px", backgroundColor: "rgb(204,204,204" }}>
                                 </div>
                               </td>
-                              <td style={{width:"98px",height:"47px"}}>{data.Name}</td>
-                              <td style={{width:"163px",height:"47px"}}>{data.Item}</td>
-                              <td style={{width:"449px",height:"47px"}}>{data.Address}</td>
-                              <td style={{width:"113px",height:"47px"}}>{data.Quality}</td>
-                              <td style={{width:"126px",height:"47px"}}>
-                              <div>
-                                <span>{data.Status}</span>
-                              </div>
+                              <td style={{ width: "98px", height: "47px" }}>{data.Name}</td>
+                              <td style={{ width: "163px", height: "47px" }}>{data.Item}</td>
+                              <td style={{ width: "449px", height: "47px" }}>{data.Address}</td>
+                              <td style={{ width: "113px", height: "47px" }}>{data.Quality}</td>
+                              <td style={{ width: "126px", height: "47px" }}>
+                                <div>
+                                  {data.Status === 'DONE' ?
+                                    <span style={{ border: "1px solid", padding: "3px", fontSize: "11px", color: "rgb(20, 246, 58)" }}>{data.Status}</span> :
+                                    data.Status === 'PENDING' ?
+                                      <span style={{ border: "1px solid", padding: "3px", fontSize: "11px", color: "#fd7e14" }}>{data.Status}</span> :
+                                      <span style={{ border: "1px solid", padding: "3px", fontSize: "11px", color: "#888" }}>{data.Status}</span>
+                                  }
+                                </div>
                               </td>
                             </tr>
-                          )})}
-                          </tbody>
-                        </table>
+                          )
+                        })}
+                      </tbody>
+                    </table>
                   </div>
 
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
+
+
+
+          <div className="rowFlexchart11" >
+
+<div className="rowFlex1chart23" style={{marginLeft:"0px"}}>
+
+
+  <div className="colchart" >
+
+    <div className="bobychart">
+      <div className="insidechartbody">
+
+        <div className="rowTopchart1" >
+          <div className="rowTopchart">
+
+            <div className="productstyle" >
+              New
+            </div>
+            <div className="reportstyle">Customer Rating</div>
+          </div>
+
+          <div className="rowTopchart11">
+            <MoreHorizIcon style={{ color: "#888" }} />
+            <CloseIcon style={{ color: "#888" }} />
+          </div>
+        </div>
+        
+
+       {mobiledata.profileDetails.map(data => 
+       {
+       return (  <div className="rowTopchart11" style={{width :"679px",marginTop:"10px"}}>
+         <div >
+         <img src={data.img} className="cardImgsize"/>
+         </div>
+         <div style={{marginLeft:"10px",width:"100%"}}>
+           <div>{data.Name}</div>
+           <p className="textproperty">{data.Reply}</p>
+           {/* <div className="alignment1">
+             <div className="alignment1" >
+           <div >IPHONE-7</div>
+
+           </div>
+           <div>
+             DEC 21,2017
+           </div>
+           </div> */}
+         </div>
+       </div>
+       )})}
+
+       
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div className="rowFlex1chart23" >
+
+
+  {/* <div className="colchart" > */}
+
+    <div className="bobychart">
+
+      {/* <div className="circlechart"> */}
+        <div className="rowTopchart123" >
+            <div className="gradient">
+            <img src="../../assets/avatarProfile.jpg" className="profile"/>
+            </div>
+            <div className="iconImagerow">
+            <img src="../../assets/facebook2.png" className="facebookiconImg"/>
+            <img src="../../assets/twitter2.png" className="twittericonImg"/>
+            <img src="../../assets/instagram2.png" className="instaiconImg"/>
+            </div>
+            <div className="centerpara" style={{marginTop:"20px"}}>
+              <div>795 Folsom Ave, Suite 600 San</div>
+              {/* <div>Francisco, CADGE 94107</div> */}
+            </div>
+            <div className="centerpara">
+              {/* <div>795 Folsom Ave, Suite 600 San</div> */}
+              <div>Francisco, CADGE 94107</div>
+            </div>
+            <Divider/>
+            <div className="lastrow">
+              <div className="columnflex">
+              <h2>98</h2>
+              <h4>Item Buy</h4>
+              </div>
+              <div className="columnflex">
+              <h2>78</h2>
+              <h4>Mobile</h4>
+              </div>
+              <div className="columnflex">
+              <h2>2,046$</h2>
+              <h4>Spent</h4>
+              </div>
+            
+            </div>
+            
+            
+
+        </div>
+      </div>
+
+    {/* </div> */}
+
+  </div>
+{/* </div> */}
+</div>
 
 
 

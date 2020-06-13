@@ -25,30 +25,47 @@
     {
         "id" : 1,
         "img" : "../../assets/cycle.png",
-        "title" : " Simple Black Clock"
+        "title" : " Simple Black Clock",
+        "price" : "$290",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     },
     {
         "id": 2,
         "img" : "../../assets/flowerplot.png",
-        "title" : " Simple Black Clock"
+        "title" : "Flower Plot",
+        "price":"$180",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
 
     },
     {
         "id": 3,
         "img" : "../../assets/bottle.png",
-        "title" : " Simple Black Clock"
+        "title" : "Bottle",
+        "price":"$180",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+
 
     },
     {
         "id": 4,
         "img" : "../../assets/flowerplot.png",
-        "title" : " Simple Black Clock"
+        "title" : "Flower Plot",
+        "price":"$180",
+        "description" : "when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+
 
     },
     {
         "id": 5,
         "img" : "../../assets/flowerplot.png",
-        "title" : " Simple Black Clock"
+        "title" : "Flower Slot",
+        "price":"$580",
+        "description" : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+
 
     }
 

@@ -7,11 +7,14 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { connect } from 'react-redux'
 import { SHOW_HOME,SHOW_USER } from '../../constants/actionTypes.js'
+import StarIcon from '@material-ui/icons/Star';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 const mapStateToProps=(state)=>{
-    console.log(state.show)
+    console.log(state.slide)
     return{
-        show : state.show
+        show : state.show,
+        slide: state.slide
     }
 }
 const mapDispatchToProps = (dispatch) =>{
@@ -33,6 +36,7 @@ class Header extends React.Component {
         this.state = {
             choice : '',
             // show : true
+            // slide : false,
         };
         this.oreobuton = () =>this.props.showHome();
         this.Userbuton = () =>this.props.showUser(); 
@@ -73,7 +77,7 @@ class Header extends React.Component {
                 {this.props.show === true ?
                 
                
-                 <div>
+                 <div className={this.props.slide ? "stretchRight" : null}>
                  <div className="header">
 
                      <div className="headerMain">
@@ -100,19 +104,19 @@ class Header extends React.Component {
 
                         <div>
                             <div>
-                                <div className="expansion1" onClick={()=>this.screenChanging("dashboard")}>
+                                <div className="expansion1" onClick={()=>this.screenChanging("Dashboard")}>
                                     <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Dashboard</div>
                                 </div>
-                                <div className="expansion1" onClick={()=>this.screenChanging("product")}>
+                                <div className="expansion1" onClick={()=>this.screenChanging("Product")}>
                                     <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product</div>
                                 </div>
-                                <div className="expansion1" onClick={()=>this.screenChanging("productlist")}>
+                                <div className="expansion1" onClick={()=>this.screenChanging("Product List")}>
                                     <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product List</div>
                                 </div>
-                                <div className="expansion1" onClick={()=>this.screenChanging("productdetails")}>
+                                <div className="expansion1" onClick={()=>this.screenChanging("Product Details")}>
                                     <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product Details</div>
                                 </div>
@@ -123,7 +127,7 @@ class Header extends React.Component {
                
                 </div> 
                 :
-                 <div>
+                 <div className={this.props.slide?"stretchLeft":null}>
                  <div>
                      <a className="profileimg">
                          <img src="../../assets/profile.jpg" className="profileimgsize"/>
@@ -135,8 +139,22 @@ class Header extends React.Component {
                  <div className="profilesize1">
                  <div>Ux UI Designer</div>
                  </div> 
-                     <div className="profilesize1">
-                              <div className="para">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</div>
+                     <div className="profilesize1column">
+                              <div className="para">795 Folsom Ave, Suite 600</div>
+                              <div className="para">San Francisco, CADGE 94107</div>
+
+                     </div>
+                     <div className="rowshowalign" >
+                         <h2 style={{display:"flex",justifyContent:"center"}}>852</h2>
+                         <h2 style={{display:"flex",justifyContent:"center"}}>13k</h2>
+                         <h2 style={{display:"flex",justifyContent:"center"}}>234</h2>
+
+                     </div>
+                     <div className="rowshowalign" >
+                         <h4>Following</h4>
+                         <h4>Follower</h4>
+                         <h4>Post</h4>
+
                      </div>
              </div>
               }

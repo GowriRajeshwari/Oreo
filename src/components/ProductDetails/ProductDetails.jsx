@@ -16,7 +16,8 @@ class Product extends React.Component {
             show: true,
             id: '',
             listId:'',
-            image : "../../assets/cycle.png"
+            image : "../../assets/cycle.png",
+            index:"0"
         };
     }
     _onMouseMove = (id) => {
@@ -25,8 +26,9 @@ class Product extends React.Component {
     _onMouseOut = (id) => {
         this.setState({ show: false, id: id })
     }
-    imageButton=(img)=>{
-        this.setState({image : img,listId : ""})
+    imageButton=(img,id,index)=>{
+        console.log(img,id,index)
+        this.setState({image : img,listId : "",index:index})
     }
     render() {
         return (
@@ -64,8 +66,9 @@ class Product extends React.Component {
                                             <img src={this.state.image} className="bigimg" />
                                         </div>
                                         <div style={{display:"flex",flexDirection:"row",padding : "5px"}}>
-                                            {productdetails.Images.map(data => (
-                                                <div key={data.id} onClick={()=>this.imageButton(data.img,data.id)} >
+                                        {/* {this.state.data.filter(searchigFor(this.props.query)).map((data, index) => { */}
+                                            {productdetails.Images.map((data,index) => (
+                                                <div key={data.id} onClick={()=>this.imageButton(data.img,data.id,index)} >
                                                     <img src={data.img}  className="smallimssize"/>
                                                </div>
                                                     ))}
@@ -74,17 +77,16 @@ class Product extends React.Component {
                                     {/* {productdetails.DetailsList.map(datalist => ( */}
                                         <div className="rowSide" >
                                             <div className="h3Style">
-                                            Simple Black Clock
+                                            {/* Simple Black Clock */}
+                                           {productdetails.DetailsList[this.state.index].title}
                                             </div>
                                             <div className="clockrow">
                                                 <div className="h3Style">Current Price:</div>
-                                                <div className="h3Stylecolor">$180</div>
+                                                <div className="h3Stylecolor">{productdetails.DetailsList[this.state.index].price}</div>
 
                                             </div>
                                             <p className="para1style">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                {productdetails.DetailsList[this.state.index].description}
                                             </p>
                                             <p className="para1style">
                                                 78% of buyers enjoyed this product! (23 votes)
@@ -104,7 +106,7 @@ class Product extends React.Component {
 
                                             </div> */}
                                         </div>
-                                                    {/* ))} */}
+                                                     {/* ))}  */}
 
                                     </div>
                                                     

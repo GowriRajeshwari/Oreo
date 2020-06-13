@@ -88,7 +88,7 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen, topIcon, showicon] = React.useState(false);
-  const [choice,setChoice] = React.useState("")
+  const [choice,setChoice] = React.useState("Product")
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -250,7 +250,7 @@ function ResponsiveDrawer(props) {
       <div className="rowP">
             <div className="productSizeP">
                 <div className="productNameP">
-                        <div className="productColorP">Product</div>
+                        <div className="productColorP">{choice}</div>
                         <small className="productWelcomeP">Welcome to Oreo</small>
                 </div>
                 <div className="pathP">
@@ -263,16 +263,16 @@ function ResponsiveDrawer(props) {
                                 <div className="wordStyle">/</div>
                                 <div className="wordStyle1">eCommerce</div>
                                 <div className="wordStyle">/</div>
-                                <div className="wordStyle">Product</div>
+                                <div className="wordStyle">{choice}</div>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
-        {choice === 'productlist' ?
-        <ProductList/> :  choice === 'product' ?
+        {choice === 'Product List' ?
+        <ProductList/> :  choice === 'Product' ?
         
-      <Product/> : choice === "dashboard" ? <Dashboardchat/> : choice === 'productdetails' ? 
+      <Product/> : choice === "Dashboard" ? <Dashboardchat/> : choice === 'Product Details' ? 
       <ProductDetails/> :  <Product/> }
         {/* <Product /> */}
       </main>

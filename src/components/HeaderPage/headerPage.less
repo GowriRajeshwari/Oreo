@@ -9,7 +9,7 @@
     color : #888
 }
 .oreoheader{
-    font-family: "Montserrat",sans-serif;   
+    // font-family: "Montserrat",sans-serif;   
     color : #888
 }
 .homeIconheader{
@@ -46,13 +46,13 @@
     font-size: 11px;
     font-weight: 700;
     color: #455a64;
-    font-family: Montserrat, Arial, Tahoma, sans-serif;
+    // font-family: Montserrat, Arial, Tahoma, sans-serif;
 }
 .content{
     font-size: 11px;
     font-weight: 700;
     color: #455a64;
-    font-family: Montserrat,sans-serif;
+    // font-family: Montserrat,sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,19 +68,19 @@
 
     color: #6572b8;
     cursor: pointer;
-    font-family: lato;
+    // font-family: lato;
 }
 .ecommerce1header{
     font-size: 15px;
     color: #455a64;
     font-weight: 400;
     cursor: pointer;
-    font-family: lato;
+    // font-family: lato;
 }
 .heading{
     font-size: 16px;
     color: #6572b8  ;
-    font-family: Montserrat, Arial, Tahoma, sans-serif;
+    // font-family: Montserrat, Arial, Tahoma, sans-serif;
 
 }
 .rowWise{
@@ -159,7 +159,7 @@
     // width: 220px;
     color: #424242;
     padding: 5px;
-    font-family: "Montserrat",sans-serif;
+    // font-family: "Montserrat",sans-serif;
     // background-color: brown;
 }
 .blackColor{
@@ -217,6 +217,12 @@
     display: flex;
     flex-direction: row;
 }
+.rowshowalign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .profileimg{
     display: flex;
@@ -237,14 +243,21 @@
 .profilesize{
     display : flex;
     justify-content: center;
-    font-family: "Montserrat",sans-serif;
+    // font-family: "Montserrat",sans-serif;
     font-size: 18px;
 }
 .profilesize1{
     display : flex;
     justify-content: center;
-    font-family: "Montserrat",sans-serif;
+    // font-family: "Montserrat",sans-serif;
     font-size: 14px;
+}
+.profilesize1column{
+    display : flex;
+    justify-content: center;
+    // font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    flex-direction: column;
 }
 .para{
     display: flex;
@@ -265,3 +278,74 @@
 //     width: 100%;
 //     // flex-direction: column;
 // }
+
+
+.stretchRight {
+    animation: stretchRight;
+    -webkit-animation-name: stretchRight;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    // transform-origin: 0% 0%;
+    // -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+}
+@keyframes stretchRight{
+    0% {
+        transform: scaleX(0.3);
+    }
+    40% {
+        transform: scaleX(1.02);
+    }
+    60% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.stretchLeft {
+    animation: stretchLeft;
+    -webkit-animation-name: stretchLeft;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    // transform-origin: 100% 0%;
+    // -ms-transform-origin: 100% 0%;
+    -webkit-transform-origin: 100% 0%;
+}
+@keyframes stretchLeft{
+    0% {
+        transform: scaleX(0.3);
+    }
+    40% {
+        transform: scaleX(1.02);
+    }
+    60% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

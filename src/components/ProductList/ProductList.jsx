@@ -16,28 +16,6 @@ class ProductList extends React.Component {
     render() {
         return (
             <div className="firstcontainerlist">
-                {/* <div className="rowlist">
-                    <div className="productSizelist">
-                        <div className="productNamelist">
-                            <div className="productColorlist">Product List</div>
-                            <small className="productWelcomelist">Welcome to Oreo</small>
-                        </div>
-                        <div className="pathlist">
-                            <div className="homeIcon1list">
-                                <div>
-                                    <HomeIcon className="iconHomeColorlist" style={{ fontSize: "18px" }} />
-                                </div>
-                                <div className="oreo1">
-                                    <div className="wordStyle1">Oreo</div>
-                                    <div className="wordStyle">/</div>
-                                    <div className="wordStyle1">eCommerce</div>
-                                    <div className="wordStyle">/</div>
-                                    <div className="wordStyle">ProductList</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
 
                 <div className="containerFluidlist">
                     <div className="rowFlexlist">
@@ -103,8 +81,12 @@ class ProductList extends React.Component {
                     </div>
                 </div>
                 
-                <div className="containerFluidlist">
-                    <div className="rowFlexlist"></div></div>
+                
+                {/* <div className="containerFluidlist"> */}
+                    {/* <div className="rowFlexlist">
+                        ghdg
+                        </div> */}
+                {/* </div> */}
 
             </div>
         )
