@@ -52,6 +52,7 @@
         "img" : "../../assets/avatar2.jpg",
         "Name":"Hossien",
         "Item":"IPHONE-7",
+        "rating":"4",
         "Reply":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante",
         "Date":"Dec 21,2019"
 
@@ -61,6 +62,7 @@
         "img" : "../../assets/avatar3.jpg",
         "Name":"Frank",
         "Item":"NOKIA-456",
+        "rating":"4",
         "Reply":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante s",
         "Date":"Dec 21,2019"
     },
@@ -69,6 +71,7 @@
         "img" : "../../assets/avatar4.jpg",
         "Name":"Camara",
         "Item":"NOKIA-8",
+        "rating":"4",
         "Reply":"2595 Pearlman Avenue Sudbury, MA 01776",
         "Date":"Dec 21,2019"
 
@@ -78,6 +81,7 @@
         "img" : "../../assets/avatar5.jpg",
         "Name":"Maryam",
         "Item":"NOKIA-456",
+        "rating":"4",
         "Reply":"Porterfield 508 Virginia Street Chicago, IL 60653",
         "Date":"Dec 21,2019"
 

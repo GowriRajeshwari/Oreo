@@ -8,7 +8,7 @@ import productList from './components/ProductList/ProductList.jsx'
 import header from './components/HeaderPage/HeaderPage.jsx'
 import productDetails from './components/ProductDetails/ProductDetails.jsx'
 import DashboardChat from './components/DashboardChart/DashboardChat.jsx'
-import Map from './components/DashboardChart/Map'
+import Map from './components/DashboardChart/Map.jsx'
 
 
 

@@ -8,9 +8,20 @@ import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import TrendingDownIcon from '@material-ui/icons/TrendingDown';
 import Divider from '@material-ui/core/Divider';
 import mobiledata from './dashboardChat.json'
+import ReactStars from 'react-rating-stars-component';
+import GoogleMapReact from 'google-map-react';
+ 
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
 class DashboardChat extends React.Component {
+  static defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -462,7 +473,7 @@ class DashboardChat extends React.Component {
 
           <div className="rowFlexchart11" >
 
-            <div className="rowFlex1chart23" style={{marginLeft:"0px"}}>
+            <div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
 
 
               <div className="colchart" >
@@ -733,7 +744,135 @@ class DashboardChat extends React.Component {
 
           <div className="rowFlexchart11" >
 
-<div className="rowFlex1chart23" style={{marginLeft:"0px"}}>
+            <div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
+
+
+              <div className="colchart" >
+
+                <div className="bobychart">
+                  <div className="insidechartbody">
+
+                    <div className="rowTopchart1" >
+                      <div className="rowTopchart">
+
+                        <div className="productstyle" >
+                          New
+            </div>
+                        <div className="reportstyle">Customer Rating</div>
+                      </div>
+
+                      <div className="rowTopchart11">
+                        <MoreHorizIcon style={{ color: "#888" }} />
+                        <CloseIcon style={{ color: "#888" }} />
+                      </div>
+                    </div>
+
+
+                    {mobiledata.profileDetails.map(data => {
+                      return (<div className="rowTopchart11" style={{ width: "679px", marginTop: "10px" }}>
+                        <div >
+                          <img src={data.img} className="cardImgsize" />
+                        </div>
+                        <div style={{ marginLeft: "10px", width: "100%" ,marginRight:"10px"}}>
+                          <div>{data.Name}</div>
+                          <div className="textproperty">{data.Reply}</div>
+                          <div className="rowImage1">
+                            <div className="rowImage">
+                              <div>{data.Item}</div>
+                              <div className="rating"><ReactStars
+                                size={15}
+                                name="rate1"
+                                count={5}
+                                value={data.rating}
+                              /></div>
+                            </div>
+                            <div>{data.Date}</div>
+                          </div>
+                          {/* <div className="alignment1">
+                              <div className="alignment1" >
+                            <div >IPHONE-7</div>
+
+                            </div>
+                            <div>
+                              DEC 21,2017
+                            </div>
+                            </div> */}
+
+                        </div>
+                      </div>
+                      )
+                    })}
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+
+            <div className="rowFlex1chart23" >
+
+
+              {/* <div className="colchart" > */}
+
+              <div className="bobychart">
+
+                {/* <div className="circlechart"> */}
+                <div className="rowTopchart123" >
+                  <div className="gradient">
+                    <img src="../../assets/avatarProfile.jpg" className="profile" />
+                  </div>
+                  <div className="iconImagerow">
+                    <img src="../../assets/facebook2.png" className="facebookiconImg" />
+                    <img src="../../assets/twitter2.png" className="twittericonImg" />
+                    <img src="../../assets/instagram2.png" className="instaiconImg" />
+                  </div>
+                  <div className="centerpara" style={{ marginTop: "20px" }}>
+                    <div>795 Folsom Ave, Suite 600 San</div>
+                    {/* <div>Francisco, CADGE 94107</div> */}
+                  </div>
+                  <div className="centerpara">
+                    {/* <div>795 Folsom Ave, Suite 600 San</div> */}
+                    <div>Francisco, CADGE 94107</div>
+                  </div>
+                  <Divider />
+                  <div className="lastrow">
+                    <div className="columnflex">
+                      <h2>98</h2>
+                      <h4>Item Buy</h4>
+                    </div>
+                    <div className="columnflex">
+                      <h2>78</h2>
+                      <h4>Mobile</h4>
+                    </div>
+                    <div className="columnflex">
+                      <h2>2,046$</h2>
+                      <h4>Spent</h4>
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              {/* </div> */}
+
+            </div>
+            {/* </div> */}
+          </div>
+
+
+          <div className="rowFlexchart11" >
+
+<div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
 
 
   <div className="colchart" >
@@ -745,41 +884,31 @@ class DashboardChat extends React.Component {
           <div className="rowTopchart">
 
             <div className="productstyle" >
-              New
+              Top
             </div>
-            <div className="reportstyle">Customer Rating</div>
+            <div className="reportstyle">Selling Country</div>
           </div>
 
-          <div className="rowTopchart11">
-            <MoreHorizIcon style={{ color: "#888" }} />
-            <CloseIcon style={{ color: "#888" }} />
-          </div>
         </div>
+
+        <div className="mapSize">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyAacZ7xKGlwpnYdo5ZTmThj2jkuMzjHoqE" }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
+
         
+     
 
-       {mobiledata.profileDetails.map(data => 
-       {
-       return (  <div className="rowTopchart11" style={{width :"679px",marginTop:"10px"}}>
-         <div >
-         <img src={data.img} className="cardImgsize"/>
-         </div>
-         <div style={{marginLeft:"10px",width:"100%"}}>
-           <div>{data.Name}</div>
-           <p className="textproperty">{data.Reply}</p>
-           {/* <div className="alignment1">
-             <div className="alignment1" >
-           <div >IPHONE-7</div>
 
-           </div>
-           <div>
-             DEC 21,2017
-           </div>
-           </div> */}
-         </div>
-       </div>
-       )})}
-
-       
 
       </div>
 
@@ -792,64 +921,33 @@ class DashboardChat extends React.Component {
 
 
 
-<div className="rowFlex1chart23" >
+<div className="rowFlex" >
 
 
   {/* <div className="colchart" > */}
 
-    <div className="bobychart">
+  <div className="bobychart">
 
-      {/* <div className="circlechart"> */}
-        <div className="rowTopchart123" >
-            <div className="gradient">
-            <img src="../../assets/avatarProfile.jpg" className="profile"/>
-            </div>
-            <div className="iconImagerow">
-            <img src="../../assets/facebook2.png" className="facebookiconImg"/>
-            <img src="../../assets/twitter2.png" className="twittericonImg"/>
-            <img src="../../assets/instagram2.png" className="instaiconImg"/>
-            </div>
-            <div className="centerpara" style={{marginTop:"20px"}}>
-              <div>795 Folsom Ave, Suite 600 San</div>
-              {/* <div>Francisco, CADGE 94107</div> */}
-            </div>
-            <div className="centerpara">
-              {/* <div>795 Folsom Ave, Suite 600 San</div> */}
-              <div>Francisco, CADGE 94107</div>
-            </div>
-            <Divider/>
-            <div className="lastrow">
-              <div className="columnflex">
-              <h2>98</h2>
-              <h4>Item Buy</h4>
-              </div>
-              <div className="columnflex">
-              <h2>78</h2>
-              <h4>Mobile</h4>
-              </div>
-              <div className="columnflex">
-              <h2>2,046$</h2>
-              <h4>Spent</h4>
-              </div>
-            
-            </div>
-            
-            
+    {/* <div className="circlechart"> */}
+    <div className="rowTopchart123" >
+      
+      
+  
 
-        </div>
-      </div>
 
-    {/* </div> */}
 
+    </div>
   </div>
-{/* </div> */}
+
+
+</div>
 </div>
 
+        
 
 
-          {/* <div style={{backgroundColor:"red",display:"flex",flexDirection:"row",width:"82%",marginTop:"10px"}}>
-                dlsknfkdv
-              </div> */}
+
+        
         </div>
 
       </div>

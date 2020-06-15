@@ -80,7 +80,7 @@ class Header extends React.Component {
                  <div className={this.props.slide ? "stretchRight" : null}>
                  <div className="header">
 
-                     <div className="headerMain">
+                     <div className="headerMainheader">
                          -- MAIN
                      </div>
                  </div>
@@ -93,7 +93,7 @@ class Header extends React.Component {
                         <div className="expansion">
                             <div className="expansion">
                                 <ShoppingCartIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
-                                <div className="ecommerce">Ecommerce</div>
+                                <div className="ecommerceheader">Ecommerce</div>
                             </div>
                             <div onClick={()=>this.expansed()}>
                                 <NavigateNextIcon className="cartIcon" style={{ fontSize: "20px", marginTop: "10px" }} />
@@ -105,19 +105,19 @@ class Header extends React.Component {
                         <div>
                             <div>
                                 <div className="expansion1" onClick={()=>this.screenChanging("Dashboard")}>
-                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
+                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "22px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Dashboard</div>
                                 </div>
                                 <div className="expansion1" onClick={()=>this.screenChanging("Product")}>
-                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
+                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "22px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product</div>
                                 </div>
                                 <div className="expansion1" onClick={()=>this.screenChanging("Product List")}>
-                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
+                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "22px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product List</div>
                                 </div>
                                 <div className="expansion1" onClick={()=>this.screenChanging("Product Details")}>
-                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "20px", paddingRight: "3px" }} />
+                                    <ArrowRightAltIcon className="cartIcon" style={{ fontSize: "22px", paddingRight: "3px" }} />
                                     <div className="ecommerce1">Product Details</div>
                                 </div>
                             </div>
