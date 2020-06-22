@@ -1,0 +1,120 @@
+{ "Images" : [
+    {
+        "id" : 1,
+        "img" : "../../assets/cycle.png"
+    },
+    {
+        "id": 2,
+        "img" : "../../assets/flowerplot.png"
+    },
+    {
+        "id": 3,
+        "img" : "../../assets/bottle.png"
+    },
+    {
+        "id": 4,
+        "img" : "../../assets/flowerplot.png"
+    },
+    {
+        "id": 5,
+        "img" : "../../assets/flowerplot.png"
+    }
+
+],
+"DetailsList" : [
+    {
+        "id" : 1,
+        "img" : "../../assets/cycle.png",
+        "title" : " Simple Black Clock",
+        "price" : "$290",
+        "rating":"3",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+        "id": 2,
+        "img" : "../../assets/flowerplot.png",
+        "title" : "Flower Plot",
+        "price":"$180",
+        "rating":"2",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+
+    },
+    {
+        "id": 3,
+        "img" : "../../assets/bottle.png",
+        "title" : "Bottle",
+        "price":"$180",
+        "rating":"5",
+        "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+
+
+    },
+    {
+        "id": 4,
+        "img" : "../../assets/flowerplot.png",
+        "title" : "Flower Plot",
+        "price":"$180",
+        "rating":"3",
+        "description" : "when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+
+
+    },
+    {
+        "id": 5,
+        "img" : "../../assets/flowerplot.png",
+        "title" : "Flower Slot",
+        "price":"$580",
+        "rating":"4",
+        "description" : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+
+
+
+    }
+
+],
+"profileDetails":[
+    {
+        "id" : 1,
+        "img" : "../../assets/avatar2.jpg",
+        "Name":"Hossien",
+        "Item":"IPHONE-7",
+        "rating":"4",
+        "Reply":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante",
+        "Date":"Dec 21,2019"
+
+    },
+    {
+        "id": 2,
+        "img" : "../../assets/avatar3.jpg",
+        "Name":"Frank",
+        "Item":"NOKIA-456",
+        "rating":"4",
+        "Reply":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante s",
+        "Date":"Dec 21,2019"
+    },
+    {
+        "id": 3,
+        "img" : "../../assets/avatar4.jpg",
+        "Name":"Camara",
+        "Item":"NOKIA-8",
+        "rating":"4",
+        "Reply":"2595 Pearlman Avenue Sudbury, MA 01776",
+        "Date":"Dec 21,2019"
+
+    },
+    {
+        "id": 4,
+        "img" : "../../assets/avatar5.jpg",
+        "Name":"Maryam",
+        "Item":"NOKIA-456",
+        "rating":"4",
+        "Reply":"Porterfield 508 Virginia Street Chicago, IL 60653",
+        "Date":"Dec 21,2019"
+
+    }
+]
+
+}
