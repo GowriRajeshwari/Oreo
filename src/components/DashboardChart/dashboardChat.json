@@ -86,6 +86,54 @@
         "Date":"Dec 21,2019"
 
     }
+],
+"MapDetails":[
+    {
+        "id": 1,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    },
+    {
+        "id": 2,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    },
+    {
+        "id": 3,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    },
+    {
+        "id": 4,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    },{
+        "id": 5,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    },{
+        "id": 6,
+        "contrary":"USA",
+        "year1":"2,009",
+        "year2":"3,904",
+        "change":"7.01%",
+        "upDown":"TrendingUp"
+    }
 ]
 
 }

@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 // import HeaderPageReducer from './reducers/HeaderPageReducer'
 import store from './store/store'
 // const store = createStore(HeaderPageReducer);
-
+// debugger;
 ReactDOM.render(
 	<Provider store={store}>
 		<App />
@@ -19,3 +19,7 @@ ReactDOM.render(
 	,
 	document.getElementById('app')
 );
+
+
+
+

@@ -11,6 +11,43 @@
     flex-wrap: wrap;
     
 }
+.firstcontainerdetails{
+    // width: 100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+
+    .containerFluiddetails{
+        display: flex;
+        // flex-wrap:wrap ;
+        // padding: 15px;
+        z-index: 3;
+        top:11em;
+        position: absolute;
+        // background-color: orange;
+    }
+    .rowFlexdetails{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    .coldetails{
+        // max-width: 25%;
+        // position: relative;
+        display : flex;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        // width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        // background-color: red;
+        
+    }
+}
 .productSizedetails{
     height: 67px;
     display: flex;
@@ -78,22 +115,8 @@
 
     // color: #888;
 }
-.containerFluiddetails{
-    width: 82%;
-    display: flex;
-    // flex-wrap:wrap ;
-    // padding: 15px;
-    z-index: 3;
-    top:11em;
-    position: absolute;
-    // background-color: orange;
-}
-.rowFlexdetails{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-}
+
+
 .columnWise{
     display: flex;
     flex-direction: column;
@@ -108,7 +131,7 @@
     display : flex;
     flex-direction: column;
     // flex-wrap: wrap;
-    width: 100%;
+    // width: 100%;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
@@ -139,6 +162,11 @@
     flex-direction: row;
 
 }
+.roworder1{
+    display: flex;
+    flex-direction: row;
+
+}
 .h3Style{
     font-size: 28px;
     height: 39px;
@@ -165,7 +193,8 @@
     display: flex;
     flex-wrap: wrap;
     font-weight: 400;
-    width: 740px;
+    // max-width: 740px;
+    // min-width: 380px;
 
 
 }
@@ -282,3 +311,59 @@
     align-items: center;
     margin-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {background: red;}
+    .roworder{
+        display: flex;
+        flex-direction: column;
+    }
+    .roworder1{
+        display: flex;
+        flex-direction: row;
+    }
+    .bigimg{
+        width:440px;
+        height: 440px;
+    }
+    
+    
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .example {background: green;}
+  
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .example {background: blue;}
+  
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .example {background: orange;}
+   
+   
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .example {background: pink;}
+ 
+  }
+
+  
