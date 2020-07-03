@@ -10,9 +10,17 @@ import Divider from "@material-ui/core/Divider";
 import mobiledata from "./dashboardChat.json";
 import ReactStars from "react-rating-stars-component";
 import GoogleMapReact from "google-map-react";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
+const useStyles = (theme) => ({
+  width: {
+    width: "300px",
+  },
+  height: {
+    height: "40px",
+  },
+});
 class DashboardChat extends React.Component {
   static defaultProps = {
     center: {
@@ -174,6 +182,7 @@ class DashboardChat extends React.Component {
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <div className="firstcontainerchart">
         <div className="containerFluidchart">
@@ -187,8 +196,8 @@ class DashboardChat extends React.Component {
                   </div>
 
                   <div className="rowTopchart11">
-                    <MoreHorizIcon style={{ color: "#888" }} />
-                    <CloseIcon style={{ color: "#888" }} />
+                    <MoreHorizIcon className="colorStyle" />
+                    <CloseIcon className="colorStyle" />
                   </div>
                 </div>
                 <div className="RowWiswD">
@@ -219,9 +228,10 @@ class DashboardChat extends React.Component {
                 <div className="bobychart">
                   <div className="chart1">
                     <Bar
-                      height={100}
                       data={this.state.chartData}
                       options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
                         scales: {
                           xAxes: [
                             {
@@ -242,11 +252,10 @@ class DashboardChat extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="rowFlexchart11">
-            <div className="rowFlex1chart22" style={{ marginLeft: "0px" }}>
+            <div className="rowFlex1chart225">
               <div className="colchart">
-                <div className="bobychart">
+                <div className="bobychartLine">
                   <div className="rowTopchart">
                     <div className="productstyle">Order</div>
                     <div className="reportstyle">Received</div>
@@ -258,18 +267,14 @@ class DashboardChat extends React.Component {
                       <TrendingUpIcon />
                     </div>
                   </div>
-                  <div
-                    className="chart"
-                    style={{
-                      width: "200px",
-                      height: "40px",
-                    }}
-                  >
+                  <div className="chartStyle">
                     <Line
-                      width={320}
+                      width={300}
                       height={40}
                       data={this.state.myData}
                       options={{
+                        maintainAspectRatio: false,
+                        responsive: true,
                         elements: {
                           point: {
                             radius: 0,
@@ -295,6 +300,7 @@ class DashboardChat extends React.Component {
                           ],
                           yAxes: [
                             {
+                              display: true,
                               ticks: {
                                 display: false,
                               },
@@ -312,7 +318,7 @@ class DashboardChat extends React.Component {
             </div>
             <div className="rowFlex1chart22">
               <div className="colchart">
-                <div className="bobychart">
+                <div className="bobychartLine">
                   <div className="rowTopchart">
                     <div className="productstyle">Total</div>
                     <div className="reportstyle">Sales</div>
@@ -324,15 +330,9 @@ class DashboardChat extends React.Component {
                       <TrendingDownIcon />
                     </div>
                   </div>
-                  <div
-                    className="chart"
-                    style={{
-                      width: "200px",
-                      height: "40px",
-                    }}
-                  >
+                  <div className="chart2Style">
                     <Line
-                      width={320}
+                      width={300}
                       height={40}
                       data={this.state.myData1}
                       options={{
@@ -378,7 +378,7 @@ class DashboardChat extends React.Component {
             </div>
             <div className="rowFlex1chart22">
               <div className="colchart">
-                <div className="bobychart">
+                <div className="bobychartLine">
                   <div className="rowTopchart">
                     <div className="productstyle">Revenue</div>
                   </div>
@@ -389,15 +389,9 @@ class DashboardChat extends React.Component {
                       <TrendingUpIcon />
                     </div>
                   </div>
-                  <div
-                    className="chart"
-                    style={{
-                      width: "200px",
-                      height: "40px",
-                    }}
-                  >
+                  <div className="chart2Style">
                     <Line
-                      width={320}
+                      width={300}
                       height={40}
                       data={this.state.myData2}
                       options={{
@@ -442,9 +436,8 @@ class DashboardChat extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="rowFlexchart11">
-            <div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
+            <div className="rowFlex1chart235">
               <div className="colchart">
                 <div className="bobychart">
                   <div className="insidechartbody">
@@ -455,8 +448,8 @@ class DashboardChat extends React.Component {
                       </div>
 
                       <div className="rowTopchart11">
-                        <MoreHorizIcon style={{ color: "#888" }} />
-                        <CloseIcon style={{ color: "#888" }} />
+                        <MoreHorizIcon className="colorStyle" />
+                        <CloseIcon className="colorStyle" />
                       </div>
                     </div>
                     <div className="rowTopchart">
@@ -467,19 +460,12 @@ class DashboardChat extends React.Component {
                       </div>
                     </div>
 
-                    <div
-                      className="chart"
-                      style={{
-                        width: "649px",
-                        height: "342px",
-                        marginTop: "70px",
-                      }}
-                    >
+                    <div className="chartCurvedata">
                       <Line
-                        width={649}
-                        height={342}
                         data={this.state.curveData}
                         options={{
+                          responsive: true,
+                          maintainAspectRatio: false,
                           elements: {
                             arc: {
                               broderWidth: 0,
@@ -522,8 +508,8 @@ class DashboardChat extends React.Component {
                       </div>
 
                       <div className="rowTopchart11">
-                        <MoreHorizIcon style={{ color: "#888" }} />
-                        <CloseIcon style={{ color: "#888" }} />
+                        <MoreHorizIcon className="colorStyle" />
+                        <CloseIcon className="colorStyle" />
                       </div>
                     </div>
 
@@ -531,12 +517,7 @@ class DashboardChat extends React.Component {
                       <div className="amountStyle">Total Sales</div>
                       <div>24,1345</div>
 
-                      <div
-                        className="chart"
-                        style={{
-                          marginTop: "20px",
-                        }}
-                      >
+                      <div className="chart marginStyle">
                         <Doughnut
                           data={this.state.pieData}
                           options={{
@@ -609,9 +590,8 @@ class DashboardChat extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="rowFlexchart11">
-            <div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
+            <div className="rowFlex1chart235">
               <div className="colchart">
                 <div className="bobychart">
                   <div className="insidechartbody">
@@ -645,40 +625,20 @@ class DashboardChat extends React.Component {
             <div className="rowFlex1chart23">
               <div className="bobychart">
                 <div className="rowTopchart123">
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      padding: "10px",
-                      marginTop: "20px",
-                    }}
-                  >
+                  <div className="tableContainer">
                     <table>
                       <thead>
                         <tr>
-                          <th
-                            align="Left"
-                            style={{ width: "70px", height: "47px" }}
-                          >
+                          <th align="Left" className="tableHeading">
                             Contrary
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "70px", height: "47px" }}
-                          >
+                          <th align="Left" className="tableHeading">
                             2016
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "70px", height: "47px" }}
-                          >
+                          <th align="Left" className="tableHeading">
                             2017
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "70px", height: "47px" }}
-                          >
+                          <th align="Left" className="tableHeading">
                             Change
                           </th>
                         </tr>
@@ -687,18 +647,10 @@ class DashboardChat extends React.Component {
                         {mobiledata.MapDetails.map((data) => {
                           return (
                             <tr key={data.id}>
-                              <td style={{ width: "70px", height: "47px" }}>
-                                {data.contrary}
-                              </td>
-                              <td style={{ width: "70px", height: "47px" }}>
-                                {data.year1}
-                              </td>
-                              <td style={{ width: "70px", height: "47px" }}>
-                                {data.year2}
-                              </td>
-                              <td style={{ width: "70px", height: "47px" }}>
-                                {data.change}
-                              </td>
+                              <td className="tableHeading">{data.contrary}</td>
+                              <td className="tableHeading">{data.year1}</td>
+                              <td className="tableHeading">{data.year2}</td>
+                              <td className="tableHeading">{data.change}</td>
                             </tr>
                           );
                         })}
@@ -709,7 +661,6 @@ class DashboardChat extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="rowFlexchart11">
             <div className="rowFlex1chart">
               <div className="colchart">
@@ -722,30 +673,21 @@ class DashboardChat extends React.Component {
                       </div>
 
                       <div className="rowTopchart11">
-                        <MoreHorizIcon style={{ color: "#888" }} />
-                        <CloseIcon style={{ color: "#888" }} />
+                        <MoreHorizIcon className="colorStyle" />
+                        <CloseIcon className="colorStyle" />
                       </div>
                     </div>
 
                     <table>
                       <thead>
                         <tr>
-                          <th
-                            align="Left"
-                            style={{ width: "60px", height: "47px" }}
-                          >
+                          <th align="Left" className="hashStyle">
                             #
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "98px", height: "47px" }}
-                          >
+                          <th align="Left" className="nameStyle">
                             Name
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "163px", height: "47px" }}
-                          >
+                          <th align="Left" className="itemStyle">
                             Item
                           </th>
                           <th
@@ -762,7 +704,7 @@ class DashboardChat extends React.Component {
                           </th>
                           <th
                             align="Left"
-                            style={{ width: "126px", height: "47px" }}
+                            style={{ width: "60px", height: "47px" }}
                           >
                             Status
                           </th>
@@ -777,14 +719,20 @@ class DashboardChat extends React.Component {
                                   style={{
                                     width: "40px",
                                     height: "33px",
-                                    backgroundColor: "rgb(204,204,204",
+                                    backgroundColor: "rgb(204,204,204)",
                                   }}
                                 ></div>
                               </td>
                               <td style={{ width: "98px", height: "47px" }}>
                                 {data.Name}
                               </td>
-                              <td style={{ width: "163px", height: "47px" }}>
+                              <td
+                                style={{
+                                  width: "163px",
+                                  height: "47px",
+                                  minWidth: "50px",
+                                }}
+                              >
                                 {data.Item}
                               </td>
                               <td style={{ width: "449px", height: "47px" }}>
@@ -793,39 +741,18 @@ class DashboardChat extends React.Component {
                               <td style={{ width: "113px", height: "47px" }}>
                                 {data.Quality}
                               </td>
-                              <td style={{ width: "126px", height: "47px" }}>
+                              <td style={{ width: "60px", height: "47px" }}>
                                 <div>
                                   {data.Status === "DONE" ? (
-                                    <span
-                                      style={{
-                                        border: "1px solid",
-                                        padding: "3px",
-                                        fontSize: "11px",
-                                        color: "rgb(20, 246, 58)",
-                                      }}
-                                    >
+                                    <span classNme="greenStyle">
                                       {data.Status}
                                     </span>
                                   ) : data.Status === "PENDING" ? (
-                                    <span
-                                      style={{
-                                        border: "1px solid",
-                                        padding: "3px",
-                                        fontSize: "11px",
-                                        color: "#fd7e14",
-                                      }}
-                                    >
+                                    <span className="orangeStyle">
                                       {data.Status}
                                     </span>
                                   ) : (
-                                    <span
-                                      style={{
-                                        border: "1px solid",
-                                        padding: "3px",
-                                        fontSize: "11px",
-                                        color: "#888",
-                                      }}
-                                    >
+                                    <span className="greyStyle">
                                       {data.Status}
                                     </span>
                                   )}
@@ -841,9 +768,8 @@ class DashboardChat extends React.Component {
               </div>
             </div>
           </div>
-
           <div className="rowFlexchart11">
-            <div className="rowFlex1chart23" style={{ marginLeft: "0px" }}>
+            <div className="rowFlex1chart235">
               <div className="colchart">
                 <div className="bobychart">
                   <div className="insidechartbody">
@@ -854,27 +780,18 @@ class DashboardChat extends React.Component {
                       </div>
 
                       <div className="rowTopchart11">
-                        <MoreHorizIcon style={{ color: "#888" }} />
-                        <CloseIcon style={{ color: "#888" }} />
+                        <MoreHorizIcon className="colorStyle" />
+                        <CloseIcon className="colorStyle" />
                       </div>
                     </div>
 
                     {mobiledata.profileDetails.map((data) => {
                       return (
-                        <div
-                          className="rowTopchart11"
-                          style={{ width: "679px", marginTop: "10px" }}
-                        >
+                        <div className="rowTopchart11 marginStyle">
                           <div>
                             <img src={data.img} className="cardImgsize" />
                           </div>
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              width: "100%",
-                              marginRight: "10px",
-                            }}
-                          >
+                          <div className="reviewCointer">
                             <div>{data.Name}</div>
                             <div className="textproperty">{data.Reply}</div>
                             <div className="rowImage1">
@@ -923,7 +840,7 @@ class DashboardChat extends React.Component {
                       className="instaiconImg"
                     />
                   </div>
-                  <div className="centerpara" style={{ marginTop: "20px" }}>
+                  <div className="centerpara marginStyle">
                     <div>795 Folsom Ave, Suite 600 San</div>
                   </div>
                   <div className="centerpara">
@@ -953,4 +870,4 @@ class DashboardChat extends React.Component {
     );
   }
 }
-export default DashboardChat;
+export default withStyles(useStyles)(DashboardChat);

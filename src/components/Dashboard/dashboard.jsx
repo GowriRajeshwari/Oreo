@@ -76,7 +76,6 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    // padding: theme.spacing(3),
   },
 }));
 
@@ -127,33 +126,21 @@ function ResponsiveDrawer(props) {
               <div className="rowWise">
                 <img src="../../assets/logo.svg" width="30px" />
                 <div className="alignment">
-                  <div style={{ fontSize: "18px" }}>OREO</div>
+                  <div className="fontStyle">OREO</div>
                 </div>
 
                 <div className="alignment1">
-                  <SwapHorizIcon
-                    className="iconColorAppbar"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <SwapHorizIcon className="iconColorAppbar fontStyle" />
                 </div>
 
                 <div className="alignment">
-                  <EventIcon
-                    className="iconColorAppbar"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <EventIcon className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
-                  <MailIcon
-                    className="iconColorAppbar"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <MailIcon className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
-                  <ContactPhoneIcon
-                    className="iconColorAppbar"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <ContactPhoneIcon className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
                   <div className="notificationrotate">
@@ -161,10 +148,7 @@ function ResponsiveDrawer(props) {
                       <span className="heartbit"></span>
                       <span className="point"></span>
                     </div>
-                    <NotificationsIcon
-                      className="iconColorAppbar"
-                      style={{ fontSize: "18px" }}
-                    />
+                    <NotificationsIcon className="iconColorAppbar fontStyle" />
                   </div>
                 </div>
                 <div className="alignment">
@@ -173,10 +157,7 @@ function ResponsiveDrawer(props) {
                       <span className="heartbit"></span>
                       <span className="point"></span>
                     </div>
-                    <FlagIcon
-                      className="iconColorAppbar"
-                      style={{ fontSize: "18px" }}
-                    />
+                    <FlagIcon className="iconColorAppbar fontStyle" />
                   </div>
                 </div>
 
@@ -187,32 +168,21 @@ function ResponsiveDrawer(props) {
                       className="inputsearch"
                       style={{
                         disableUnderline: true,
-                        outline: "none",
-                        border: "none",
                       }}
                     />
                   </div>
                   <div className="alignment3">
-                    <SearchIcon
-                      className="blackColor"
-                      style={{ fontSize: "18px" }}
-                    />
+                    <SearchIcon className="blackColor fontStyle" />
                   </div>
                   <div></div>
                 </div>
               </div>
               <div className="rowWise1">
                 <div className="alignment">
-                  <PowerSettingsNewIcon
-                    className="iconColorAppbar"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <PowerSettingsNewIcon className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignmentrotate">
-                  <SettingsIcon
-                    className="iconColorAppbar3"
-                    style={{ fontSize: "18px" }}
-                  />
+                  <SettingsIcon className="iconColorAppbar3 fontStyle" />
                 </div>
               </div>
             </div>
@@ -258,10 +228,7 @@ function ResponsiveDrawer(props) {
               <div className="pathP">
                 <div className="homeIcon1P">
                   <div>
-                    <HomeIcon
-                      className="iconHomeColorP"
-                      style={{ fontSize: "18px" }}
-                    />
+                    <HomeIcon className="iconHomeColorP fontStyle" />
                   </div>
                   <div className="oreo1">
                     <div className="wordStyle1">Oreo</div>
