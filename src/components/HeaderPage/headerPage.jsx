@@ -74,17 +74,11 @@ class Header extends React.Component {
               <div>
                 <div className="expansion">
                   <div className="expansion">
-                    <ShoppingCartIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", paddingRight: "3px" }}
-                    />
+                    <ShoppingCartIcon className="cartIcon iconStyle" />
                     <div className="ecommerceheader">Ecommerce</div>
                   </div>
                   <div onClick={() => this.expansed()}>
-                    <NavigateNextIcon
-                      className="cartIcon"
-                      style={{ fontSize: "20px", marginTop: "10px" }}
-                    />
+                    <NavigateNextIcon className="cartIcon iconStyle" />
                   </div>
                 </div>
 
@@ -94,40 +88,28 @@ class Header extends React.Component {
                       className="expansion1"
                       onClick={() => this.screenChanging("Dashboard")}
                     >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
+                      <ArrowRightAltIcon className="cartIcon iconStyle2" />
                       <div className="ecommerce1">Dashboard</div>
                     </div>
                     <div
-                      className="expansion1"
+                      className="expansion1 "
                       onClick={() => this.screenChanging("Product")}
                     >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
+                      <ArrowRightAltIcon className="cartIcon iconStyle2" />
                       <div className="ecommerce1">Product</div>
                     </div>
                     <div
                       className="expansion1"
                       onClick={() => this.screenChanging("Product List")}
                     >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
+                      <ArrowRightAltIcon className="cartIcon iconStyle2" />
                       <div className="ecommerce1">Product List</div>
                     </div>
                     <div
                       className="expansion1"
                       onClick={() => this.screenChanging("Product Details")}
                     >
-                      <ArrowRightAltIcon
-                        className="cartIcon"
-                        style={{ fontSize: "22px", paddingRight: "3px" }}
-                      />
+                      <ArrowRightAltIcon className="cartIcon iconStyle2" />
                       <div className="ecommerce1">Product Details</div>
                     </div>
                   </div>
@@ -156,9 +138,9 @@ class Header extends React.Component {
               <div className="para">San Francisco, CADGE 94107</div>
             </div>
             <div className="rowshowalign">
-              <h2 style={{ display: "flex", justifyContent: "center" }}>852</h2>
-              <h2 style={{ display: "flex", justifyContent: "center" }}>13k</h2>
-              <h2 style={{ display: "flex", justifyContent: "center" }}>234</h2>
+              <h2 className="centerStyle">852</h2>
+              <h2 className="centerStyle">13k</h2>
+              <h2 className="centerStyle">234</h2>
             </div>
             <div className="rowshowalign">
               <h4>Following</h4>

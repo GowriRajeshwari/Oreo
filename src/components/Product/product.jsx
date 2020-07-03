@@ -82,13 +82,7 @@ class Product extends React.Component {
                         <div className="productname">{data.productName}</div>
                         <div className="rowProduct">
                           <div>{data.dollar}</div>
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              color: "red",
-                              fontWeight: "500",
-                            }}
-                          >
+                          <div className="discountDollar">
                             {data.discountDollar}
                           </div>
                         </div>
