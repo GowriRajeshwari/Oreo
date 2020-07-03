@@ -71,13 +71,7 @@ class Product extends React.Component {
                     <div>
                       <img src={this.state.image} className="bigimg" />
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        padding: "5px",
-                      }}
-                    >
+                    <div className="mapDiv">
                       {productdetails.Images.map((data, index) => (
                         <div
                           key={data.id}

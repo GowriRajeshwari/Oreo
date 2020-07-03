@@ -540,14 +540,7 @@ class DashboardChat extends React.Component {
                         </div>
                       </div>
 
-                      <div
-                        className="chart"
-                        style={{
-                          marginTop: "20px",
-                          justifyContent: "center",
-                          display: "flex",
-                        }}
-                      >
+                      <div className="chart blackBar">
                         <Bar
                           height={50}
                           data={this.state.blackchartdata}
@@ -690,22 +683,13 @@ class DashboardChat extends React.Component {
                           <th align="Left" className="itemStyle">
                             Item
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "449px", height: "47px" }}
-                          >
+                          <th align="Left" className="addressStyle">
                             Address
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "113px", height: "47px" }}
-                          >
+                          <th align="Left" className="qualityStyle">
                             Quality
                           </th>
-                          <th
-                            align="Left"
-                            style={{ width: "60px", height: "47px" }}
-                          >
+                          <th align="Left" className="statusStyle">
                             Status
                           </th>
                         </tr>
@@ -714,34 +698,14 @@ class DashboardChat extends React.Component {
                         {mobiledata.PhoneDetails.map((data) => {
                           return (
                             <tr key={data.id}>
-                              <td style={{ width: "60px", height: "47px" }}>
-                                <div
-                                  style={{
-                                    width: "40px",
-                                    height: "33px",
-                                    backgroundColor: "rgb(204,204,204)",
-                                  }}
-                                ></div>
+                              <td className="hashStyle">
+                                <div className="greyBoxStyle"></div>
                               </td>
-                              <td style={{ width: "98px", height: "47px" }}>
-                                {data.Name}
-                              </td>
-                              <td
-                                style={{
-                                  width: "163px",
-                                  height: "47px",
-                                  minWidth: "50px",
-                                }}
-                              >
-                                {data.Item}
-                              </td>
-                              <td style={{ width: "449px", height: "47px" }}>
-                                {data.Address}
-                              </td>
-                              <td style={{ width: "113px", height: "47px" }}>
-                                {data.Quality}
-                              </td>
-                              <td style={{ width: "60px", height: "47px" }}>
+                              <td className="nameStyle">{data.Name}</td>
+                              <td className="itemStyle">{data.Item}</td>
+                              <td className="addressStyle">{data.Address}</td>
+                              <td className="qualityStyle">{data.Quality}</td>
+                              <td className="statusStyle">
                                 <div>
                                   {data.Status === "DONE" ? (
                                     <span classNme="greenStyle">
