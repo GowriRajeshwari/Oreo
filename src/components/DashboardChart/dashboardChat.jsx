@@ -670,7 +670,7 @@ class DashboardChat extends React.Component {
                       </div>
                     </div>
 
-                    <table>
+                    <table className="tableWidth">
                       <thead>
                         <tr>
                           <th align="Left" className="hashStyle">
