@@ -7,8 +7,6 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import { connect } from "react-redux";
 import { SHOW_HOME, SHOW_USER } from "../../constants/actionTypes.js";
-import StarIcon from "@material-ui/icons/Star";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const mapStateToProps = (state) => {
   console.log(state.slide);

@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
+import {
+  AppBar,
+  CssBaseline,
+  Divider,
+  Drawer,
+  Hidden,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+  Typography,
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  makeStyles,
+  useTheme,
+} from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
 import HomeIcon from "@material-ui/icons/Home";
-import PersonIcon from "@material-ui/icons/Person";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import SwapHorizIcon from "@material-ui/icons/SwapHoriz";
 import EventIcon from "@material-ui/icons/Event";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
@@ -32,16 +31,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import SettingsIcon from "@material-ui/icons/Settings";
 import "./dashboard.less";
-import DashboardHome from "../DashboardHome/DashboardHome";
 import Product from "../Product/Product";
 import ProductList from "../ProductList/ProductList";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import Header from "../HeaderPage/HeaderPage";
 import Dashboardchat from "../DashboardChart/DashboardChat";
-// import logo from '../../assets/logo.svg'
 import "../Product/product.less";
 
 const drawerWidth = 240;
@@ -69,8 +63,6 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  // necessary for content to be below app bar
-  //   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
   },

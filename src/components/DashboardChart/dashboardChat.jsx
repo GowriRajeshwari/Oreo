@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Bar, pie, Line, Doughnut } from "react-chartjs-2";
-import HomeIcon from "@material-ui/icons/Home";
 import "./dashboardChat.less";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import CloseIcon from "@material-ui/icons/Close";
@@ -699,7 +698,13 @@ class DashboardChat extends React.Component {
                           return (
                             <tr key={data.id}>
                               <td className="hashStyle">
-                                <div className="greyBoxStyle"></div>
+                                <div
+                                  style={{
+                                    width: "40px",
+                                    height: "33px",
+                                    backgroundColor: "rgb(204,204,204)",
+                                  }}
+                                ></div>
                               </td>
                               <td className="nameStyle">{data.Name}</td>
                               <td className="itemStyle">{data.Item}</td>

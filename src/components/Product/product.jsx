@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import HomeIcon from "@material-ui/icons/Home";
 import "./product.less";
 import productdata from "./product.json";
 import AddIcon from "@material-ui/icons/Add";
