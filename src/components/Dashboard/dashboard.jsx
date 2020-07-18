@@ -19,17 +19,19 @@ import {
   makeStyles,
   useTheme,
 } from "@material-ui/core";
-import MailIcon from "@material-ui/icons/Mail";
-import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from "@material-ui/icons/Home";
-import SwapHorizIcon from "@material-ui/icons/SwapHoriz";
-import EventIcon from "@material-ui/icons/Event";
-import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import FlagIcon from "@material-ui/icons/Flag";
-import SearchIcon from "@material-ui/icons/Search";
-import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
-import SettingsIcon from "@material-ui/icons/Settings";
+import {
+  Mail,
+  Menu,
+  Home,
+  SwapHoriz,
+  Event,
+  ContactPhone,
+  Notifications,
+  Flag,
+  Search,
+  PowerSettingsNew,
+  Settings,
+} from "@material-ui/icons";
 import "./dashboard.less";
 import Product from "../Product/Product";
 import ProductList from "../ProductList/ProductList";
@@ -112,7 +114,7 @@ function ResponsiveDrawer(props) {
               onClick={handleDrawerToggle}
               className={classes.menuButton}
             >
-              <MenuIcon />
+              <Menu />
             </IconButton>
             <div className="rowWise2">
               <div className="rowWise">
@@ -122,17 +124,17 @@ function ResponsiveDrawer(props) {
                 </div>
 
                 <div className="alignment1">
-                  <SwapHorizIcon className="iconColorAppbar fontStyle" />
+                  <SwapHoriz className="iconColorAppbar fontStyle" />
                 </div>
 
                 <div className="alignment">
-                  <EventIcon className="iconColorAppbar fontStyle" />
+                  <Event className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
-                  <MailIcon className="iconColorAppbar fontStyle" />
+                  <Mail className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
-                  <ContactPhoneIcon className="iconColorAppbar fontStyle" />
+                  <ContactPhone className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignment">
                   <div className="notificationrotate">
@@ -140,7 +142,7 @@ function ResponsiveDrawer(props) {
                       <span className="heartbit"></span>
                       <span className="point"></span>
                     </div>
-                    <NotificationsIcon className="iconColorAppbar fontStyle" />
+                    <Notifications className="iconColorAppbar fontStyle" />
                   </div>
                 </div>
                 <div className="alignment">
@@ -149,7 +151,7 @@ function ResponsiveDrawer(props) {
                       <span className="heartbit"></span>
                       <span className="point"></span>
                     </div>
-                    <FlagIcon className="iconColorAppbar fontStyle" />
+                    <Flag className="iconColorAppbar fontStyle" />
                   </div>
                 </div>
 
@@ -164,17 +166,17 @@ function ResponsiveDrawer(props) {
                     />
                   </div>
                   <div className="alignment3">
-                    <SearchIcon className="blackColor fontStyle" />
+                    <Search className="blackColor fontStyle" />
                   </div>
                   <div></div>
                 </div>
               </div>
               <div className="rowWise1">
                 <div className="alignment">
-                  <PowerSettingsNewIcon className="iconColorAppbar fontStyle" />
+                  <PowerSettingsNew className="iconColorAppbar fontStyle" />
                 </div>
                 <div className="alignmentrotate">
-                  <SettingsIcon className="iconColorAppbar3 fontStyle" />
+                  <Settings className="iconColorAppbar3 fontStyle" />
                 </div>
               </div>
             </div>
@@ -220,7 +222,7 @@ function ResponsiveDrawer(props) {
               <div className="pathP">
                 <div className="homeIcon1P">
                   <div>
-                    <HomeIcon className="iconHomeColorP fontStyle" />
+                    <Home className="iconHomeColorP fontStyle" />
                   </div>
                   <div className="oreo1">
                     <div className="wordStyle1">Oreo</div>
